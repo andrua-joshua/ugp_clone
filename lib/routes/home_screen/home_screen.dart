@@ -26,6 +26,16 @@ class HomeScreenState extends State<HomeScreen>{
   ];  
 
 
+  final List<String> icons = const [
+    "assets/images/report.jpg",
+    "assets/images/eps_ticket.jpg",
+    "assets/images/lost_and_found.jpg",
+    "assets/images/missing_person.jpg",
+    "assets/images/stations.jpg",
+    "assets/images/location.jpg"
+  ];  
+
+
   
 
   @override
@@ -36,7 +46,7 @@ class HomeScreenState extends State<HomeScreen>{
     ()=> Navigator.pushNamed(context, RouteGenerator.lostAndFoundScreen),
     ()=> Navigator.pushNamed(context, RouteGenerator.missingPersonsScreen),
     ()=> Navigator.pushNamed(context, RouteGenerator.searchStationsScreen),
-    (){},
+    ()=> Navigator.pushNamed(context, RouteGenerator.allStationsScreen),
   ];
 
     return Scaffold(
@@ -63,6 +73,7 @@ class HomeScreenState extends State<HomeScreen>{
                           colCount: 2,
                           children: List.generate(
                             items.length, (x)=> UnitHomeItem(
+                              img: icons[x],
                             label: items[x], 
                             onclick: functions[x],
                             width: width)));

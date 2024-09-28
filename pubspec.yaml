@@ -42,6 +42,7 @@ dependencies:
   http: ^1.2.2
   geocoding: ^3.0.0
   geolocator: ^13.0.1
+  flutter_launcher_icons: ^0.14.1
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,14 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/wave.gif
+    - assets/images/eps_ticket.jpg
+    - assets/images/location.jpg
+    - assets/images/lost_and_found.jpg
+    - assets/images/missing_person.jpg
+    - assets/images/report.jpg
+    - assets/images/stations.jpg
+    - assets/images/logo.jpg
+    - assets/images/download.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

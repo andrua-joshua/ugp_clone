@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:ugp_clone/models/lost_and_found.dart';
 import 'package:ugp_clone/models/missing_person.dart';
+import 'package:ugp_clone/routes/all_stations_screen/all_stations_screen.dart';
 import 'package:ugp_clone/routes/google_maps_screen/google_maps_screen.dart';
 import 'package:ugp_clone/routes/home_screen/home_screen.dart';
 import 'package:ugp_clone/routes/login_screen/login_screen.dart';
@@ -26,6 +27,8 @@ class RouteGenerator{
   static const String reportCrimeScreen = "/reportCrimeScreen";
 
   static const String googleMapsScreen = "/googleMapsScreen";
+
+  static const String allStationsScreen = "/allStationsScreen";
   
 
   static Route<dynamic> generateRoute(RouteSettings settings){
@@ -37,6 +40,10 @@ class RouteGenerator{
       case loginScreen:
           return MaterialPageRoute(
             builder: (_) => const LoginScreen(),);
+
+      case allStationsScreen:
+          return MaterialPageRoute(
+            builder: (_) => const AllStationsScreen());
 
       case googleMapsScreen:
           final maker = settings.arguments as Marker;

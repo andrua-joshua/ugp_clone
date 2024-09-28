@@ -70,7 +70,13 @@ class LoginScreenState extends State<LoginScreen>{
                   child:Container(
                   height: 160,
                   width: 160,
-                  color: Colors.white,
+                  
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    image: DecorationImage(
+                      fit: BoxFit.fill,
+                      image: AssetImage("assets/images/logo.jpg"))
+                  ),
                 )),
               const SizedBox(height: 50,),
               const Text("Welcome to UPF Mobile", style: AppStyles.bigBoldGreyTextStyle,),
